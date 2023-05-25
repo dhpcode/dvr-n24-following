@@ -528,8 +528,6 @@ img {
 .layout-2-1-sidebar-item:not(:last-child) {
   margin-bottom: 10px;
 }
-.sidebar-ad {
-}
 .sidebar-ad-link {
   display: flex;
 }
