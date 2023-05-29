@@ -148,6 +148,10 @@ img {
   padding-right: 20px;
   border-radius: 60px;
   border: 0;
+  background-image: url('../images/icon-search.svg');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 15px center;
 }
 
 /* LANG TOGGLE */
@@ -333,6 +337,10 @@ img {
   background-color: #FFD5B6;
   padding: 24px 71px 24px 29px;
   border-radius: 10px;
+  background-image: url('../images/global-notification-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .notification-cta-text {
@@ -771,4 +779,17 @@ img {
 .definitions-card-value {
   margin: 0;
   line-height: 19px
+}
+
+/* RETINA BGS */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  .notification-cta {
+    background-image: url('../images/global-notification-bg@2x.jpg');
+  }
 }
