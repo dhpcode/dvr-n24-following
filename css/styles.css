@@ -6,13 +6,17 @@
   --outline-color: var(--brand-color);
   --cards-background: #f6f6f6;
 }
+
 /* GLOBAL */
 html {
   height: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -38,6 +42,7 @@ img {
 *:focus {
   outline: 2px dashed var(--outline-color);
   outline-offset: 2px;
+  outline: none;
 }
 
 /* BUTTON */
@@ -70,12 +75,28 @@ img {
   color: #fff;
 }
 
+.button-large {
+  padding: 15px 40px;
+  font-size: 24px;
+  line-height: normal;
+}
 .button:hover {
   opacity: 0.8;
 }
 
 .button:active {
   opacity: 0.6;
+}
+
+/* VISUALLY HIDDEN */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* CONTAINER  */
@@ -782,6 +803,83 @@ img {
   margin: 0;
   line-height: 19px
 }
+
+
+/* MODAL */
+.modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+.modal-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dialogue {
+  width: 100%;
+  height: 250px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 50px;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  opacity: 0.8;
+}
+
+.modal-close:active {
+  opacity: 0.6;
+}
+
+.modal-close-icon {
+  display: flex;
+}
+.modal-content-text {
+  color: var(--black);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+
+}
+
 
 /* RETINA BGS */
 
