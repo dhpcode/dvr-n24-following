@@ -1,11 +1,14 @@
-const elButtonNotification = document.querySelector('#notification-on');
-const elModalOpen = document.querySelector('#modal-notification');
-elButtonNotification.addEventListener('click', function() {
-    elModalOpen.classList.add('modal-open')
-});
+const elModal = document.querySelector('.modal');
+const elModalClose = document.querySelector('.js-modal-close');
 
-const elModalClose = document.querySelector('.modal-close');
+if (elModalClose) {
+    elModalClose.addEventListener('click', function() {
+        elModal.classList.remove('modal-open')
+    });
+}
 
-elModalClose.addEventListener('click', function() {
-    elModalOpen.classList.remove('modal-open')
-});
+// 30 soniyadan keyin modalni ishga tushirish ya'ni -> .modal + .modal-open
+
+setTimeout( function() {
+    elModal.classList.add('modal-open');    
+}, 30000);
